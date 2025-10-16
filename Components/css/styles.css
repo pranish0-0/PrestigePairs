@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /*Declaring variables for colors */
+    --bgcolor: #e6ebf5;    
+    --highlight: #1F2A44;
+    --textColor: #555555;
+    --navbg: #d3d8e2;
+    --hover: #222222;
+}
+
+body {
+    background: var(--bgcolor);
+    color: var(--textColor);
+}
+
+/* HEADER  */
+#header{
+    width: 100%;
+    height: 50px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;     /*Creates a space between logo and the listed elements */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    background-color: var(--navbg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /*Creates a shadow effect below navbar */
+    position: fixed;    
+    z-index: 100; 
+}
+
+/* Header Logo */
+#header a{
+    text-decoration: none;
+    color: var(--highlight);
+    font-weight: 1000;
+    font-size: 22px;
+}
+
+/*Navbar Styling */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--navbg);
+    padding: 0 150px;
+}
+
+/* Navbar List Items */
+#navbar li{
+    list-style-type: none;
+    padding: 0 35px;
+}
+
+/* Navbar Links */
+#navbar li a{
+    text-decoration: none;;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--textColor);
+    transition: 0.2s ease;
+    position: relative;
+}
+
+/* Hover & Active State for Navbar Links */
+#navbar li a:hover,
+#navbar li:hover{
+    color: var(--hover);
+    transform: scale(1.06);
+    transition: .3s;
+}
+
+/* __________________________________________ */
+
+/* Footer  */
+footer{
+    background-color: var(--navbg);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+}
+.footer-img{
+    width: 550px;
+    height: 100%;
+}
+.footer-img img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    margin: 20px;
+}
+.footer-content{
+    padding: 32px;  
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-content p{
+    color: var(--textColor);
+    font-size: 18px;
+    margin: 10px 0;
+}
+footer h1{
+    font-size: 65px;
+    color: var(--highlight);
+    font-style: italic;
+    font-weight: 800;
+}
+#social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#social-media a{
+    color: var(--textColor);
+    font-size: 18px;
+    font-weight: 600;
+    transition: .5s ease;
+    margin: 0 5px;
+}
+#social-media a:hover{
+    transform: scale(1.1);
+}
+
+/* Css used by both home page and products page */
+
+
+.btn{
+    text-decoration: none;
+    color: var(--highlight);
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: var(--navbg);
+    cursor: pointer;
+    transition: .6s ease;
+}
+.btn:hover{
+    background-color: var(--highlight);
+    font-size: 18px;
+    color:var(--navbg) !important;
+}
+
+.products{
+    margin: 20px 0;
+    height: 525px;
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+}
+.product{
+    width: 287px;
+    height: 357px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    transition: .8s;
+    overflow: hidden;
+    transition: .6s ;
+}
+.product:hover{
+    transform: scale(1.05); /* Makes the box bigger */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+    height: fit-content;
+}
+.product-info p {
+    font-size: 14px;
+    max-height: 100px;
+    opacity: 0;
+    transition: .4s;
+}
+.product:hover p {
+    opacity: 1;
+}
+.product-img {
+    width: 100%;
+    height: 255px;
+    border-radius: 20px;
+    padding-bottom: 15px;
+}
+.product-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.product-info{
+    margin: 0 10px;
+    line-height: 1.5;
+}
+.name-cart{
+    display: flex;
+    margin-top: -12px;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-btn{
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--navbg);
+    cursor: pointer;
+    font-size: 18px;
+    transition: .5s ease;
+}
+.cart-btn:hover{
+    background-color: var(--highlight);
+    color: var(--navbg);
+}
